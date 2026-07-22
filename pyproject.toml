@@ -1,0 +1,31 @@
+[project]
+name = "interferon-sdk"
+version = "0.1.0"
+description = "Container-native immune signaling for Docker stacks."
+readme = "README.md"
+authors = [
+    { name = "Emiliano Gandini Outeda", email = "emiliano.gandini@protonmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.optional-dependencies]
+redis = ["redis>=6.0.0"]
+all = ["redis>=6.0.0"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.17,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "interferon"
+source-exclude = ["/src/interferon/watcher/**"]
+wheel-exclude = ["/src/interferon/watcher/**"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
