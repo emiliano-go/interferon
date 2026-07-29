@@ -245,6 +245,9 @@ redis = [
 dev = [
     { name = "pytest" },
 ]
+watcher = [
+    { name = "aiodocker" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -256,6 +259,7 @@ provides-extras = ["redis", "all"]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=8.0.0" }]
+watcher = [{ name = "aiodocker", specifier = ">=0.27.0" }]
 
 [[package]]
 name = "multidict"
