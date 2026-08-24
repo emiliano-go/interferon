@@ -47,7 +47,7 @@ Expected output:
 14:30:01 INFO listener:Connected to Docker daemon
 14:30:05 INFO __main__:Event: action=create container=foo image=alpine
 14:30:05 INFO __main__:Event: action=start container=foo image=alpine
-```
 14:30:05 INFO __main__:Event: action=die container=foo image=alpine exit_code=0
 14:30:05 INFO __main__:Event: action=stop container=foo image=alpine
 14:30:05 INFO __main__:Event: action=destroy container=foo image=alpine
+```
